@@ -1,0 +1,31 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand" href="#">{{ title }}</a>
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" routerLink="/example">Example</a>
+      </li>
+      <li class="nav-item dropdown" routerLinkActive="active"
+          [routerLinkActiveOptions]="{exact: true}">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+           aria-haspopup="true" aria-expanded="false">
+          Tasks
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" routerLink="/user-details">1. User Details</a>
+          <a class="dropdown-item" routerLink="/pinned-tweet">2. Pinned Tweet</a>
+          <a class="dropdown-item" routerLink="/last-ten-tweets">3. Last 10 Tweet</a>
+          <a class="dropdown-item" routerLink="/timeline">4. Timeline</a>
+          <a class="dropdown-item" routerLink="/following-ten">5. Following (Top 10 + page)</a>
+          <a class="dropdown-item" routerLink="/follower-list">6. Follower (Load More...)</a>
+          <a class="dropdown-item" routerLink="/mention-ten">7. Mentions (Top 10 + page)</a>
+          <a class="dropdown-item" routerLink="/mention-list">8. Mentions (Load More...)</a>
+          <a class="dropdown-item" routerLink="/search-ten">9. Search Tweets (Top 10 + page)</a>
+          <a class="dropdown-item" routerLink="/search-list">10. Search Tweets (Load More...)</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>
